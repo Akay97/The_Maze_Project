@@ -1,0 +1,68 @@
+# **The Maze Project - MVP**
+*A 3D Game created using SDL2*
+
+## Minimum Viable Product (MVP) for the Maze Game with SDL2:
+
+### Explanation:
+
+- **Walls:**  
+  Develop a 2D array to represent the maze layout and draw walls using the SDL2 graphics library. Walls should be illustrated by rectangles or lines.
+  
+  - Define a 2D array to store the maze structure.
+  - Use the SDL2 graphics library to render the walls using rectangles or lines.
+
+- **Orientation:**  
+  Utilize the arrow keys to manage player movement and rotation within the maze. SDL_Event can be used to capture user input.
+
+  - Implement a function to capture input with SDL_Event.
+  - Update player position and orientation according to the input provided by the user.
+
+- **Movement:**  
+  Create basic movement mechanics for the player, allowing them to move forward, backward, left, and right.
+  
+  - Create a function to modify the player’s position based on the current orientation and user input.
+
+- **Collision Detection:**  
+  Incorporate a collision system to prevent the player from moving through walls. If a wall is encountered, halt player movement.
+
+  - Implement a function to detect collisions between the player and walls.
+  - Stop movement if a collision occurs.
+
+- **Parser:**  
+  Build a simple parser to read maze data from a text file and store it in a 2D array.
+
+  - Implement a function to read and parse maze data.
+  - Store the data in a 2D array.
+
+- **Maze Rendering:**  
+  Render the maze using the stored data. Differentiate walls and floors/ceilings by using distinct colors.
+
+  - Utilize the data to draw the maze.
+  - Apply various colors for walls and floor/ceiling distinctions.
+
+- **Textures:**  
+  Integrate simple textures onto the walls via SDL2’s texture rendering capabilities.
+
+  - Load wall textures.
+  - Render textures on the walls using SDL2.
+
+---
+
+## Data Modeling
+
+### **USER STORY**
+
+End users want to enjoy a maze game using SDL2, challenging themselves to complete the maze while improving their speed and accuracy.
+
+Upon starting the game, they expect to see a main menu that allows them to begin a new game, load a previous one, or exit. When choosing to start a new game, they would like to set difficulty levels based on maze size and obstacle count.
+
+As the game begins, they want to see a maze with a controllable character, which they can maneuver using the keyboard’s arrow keys. The character’s movement should be responsive and fluid, without noticeable delay. A timer should track the time they have to finish the maze, and a score system should reflect their progress.
+
+During gameplay, they hope to collect items such as coins that will boost their score, while also encountering obstacles that slow their progress or increase the challenge.
+
+Upon reaching the maze’s endpoint, they expect a congratulatory message, displaying their final score and time. They also want the option to save the game for future play.
+
+Throughout the game, players expect immersive sound effects corresponding to their actions, such as collecting items or hitting obstacles. They also seek background music that enhances the game’s atmosphere and excitement.
+
+Finally, they desire visually engaging graphics and animations, ensuring the game remains fun and captivating.
+
