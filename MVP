@@ -1,54 +1,44 @@
-THE MAZE PROJECT - MVP
-(A 3D Game created using SDL2)
+WEBSITE API INTERACTION - MVP
+(A Website for API-Driven User Interaction)
 
-Minimum Viable Product (MVP) for the Maze Game with SDL2:
+Minimum Viable Product (MVP) for the API Website:
 
 Overview:
-Walls: Develop a 2D array to represent the maze layout and draw walls using the SDL2 graphics library. Walls should be illustrated by rectangles or lines.  
-  - Define a 2D array to store the maze structure.  
-  - Use the SDL2 graphics library to render the walls using rectangles or lines.
 
-Orientation: Utilize the arrow keys to manage player movement and rotation within the maze. SDL_Event can be used to capture user input.  
-  - Implement a function to capture input with SDL_Event.  
-  - Update player position and orientation according to the input provided by the user.
+1. API Integration:  
+   The website will serve as a platform where users can interact with external APIs to retrieve or send data. API requests will allow users to fetch information, submit data, or trigger events.
+   - Develop endpoints to allow users to interact with services via the API.
+   - Use external APIs to fetch data such as user info, weather, or any public API of choice.
 
-Movement: Create basic movement mechanics for the player, allowing them to move forward, backward, left, and right.  
-  - Create a function to modify the player’s position based on the current orientation and user input.
+2. Frontend Interface:  
+   Build a user-friendly, responsive interface where users can input data (e.g., search terms, query parameters) and get dynamic results from the API.
+   - Implement input forms or fields that send requests to the API.
+   - Display fetched data dynamically on the page (e.g., search results, weather reports, etc.).
 
-Collision Detection: Incorporate a collision system to prevent the player from moving through walls. If a wall is encountered, halt player movement.  
-  - Implement a function to detect collisions between the player and walls.  
-  - Stop movement if a collision occurs.
+3. Data Visualization:  
+   Visualize data fetched from APIs. Depending on the type of data, use charts, lists, or graphs to present information clearly and interactively.
+   - Integrate libraries like Chart.js or D3.js for data visualization, where applicable.
+   - Display real-time updates if the API supports live data (e.g., stock prices, weather).
 
-Parser: Build a simple parser to read maze data from a text file and store it in a 2D array.  
-  - Implement a function to read and parse maze data.  
-  - Store the data in a 2D array.
+4. User Authentication (Optional):  
+   If the API requires user-specific data, implement a simple user authentication system where users can log in to access personalized API data.
+   - Use OAuth or another authentication method for secure API access if required.
+   - Store tokens or session information for repeat API calls.
 
-Maze Rendering: Render the maze using the stored data. Differentiate walls and floors/ceilings by using distinct colors.  
-  - Utilize the data to draw the maze.  
-  - Apply various colors for walls and floor/ceiling distinctions.
+5. Error Handling and Feedback:  
+   Ensure that users receive feedback if the API call fails or if there’s an error with the data retrieval.
+   - Display error messages or loading spinners during API interaction.
+   - Provide clear, user-friendly messages for different API states (e.g., no data found, API error).
 
-Textures: Integrate simple textures onto the walls via SDL2’s texture rendering capabilities.  
-  - Load wall textures.  
-  - Render textures on the walls using SDL2.
+6. Interactive Elements:  
+   Allow users to filter or refine their API queries directly from the website interface. For example, they can change search parameters, select categories, or modify date ranges.
+   - Enable dynamic API requests based on user input without reloading the page.
+   - Use JavaScript to send requests and display updated data seamlessly.
 
----
+User Story:
 
-Data Modeling
+End users will visit the website to interact with external APIs. Upon arriving, they will have access to an input field or form where they can submit a query or search. The website will fetch the relevant data from the API and display it in real time. Users want a clear and visually appealing presentation of data, as well as responsive interaction that updates based on their input.
 
-USER STORY 
-End users want to enjoy a maze game using SDL2, challenging themselves to complete the maze while improving their speed and accuracy.
-
-Upon starting the game, they expect to see a main menu that allows them to begin a new game, load a previous one, or exit. When choosing to start a new game, they would like to set difficulty levels based on maze size and obstacle count.
-
-As the game begins, they want to see a maze with a controllable character, which they can maneuver using the keyboard’s arrow keys. The character’s movement should be responsive and fluid, without noticeable delay.
-A timer should track the time they have to finish the maze, and a score system should reflect their progress.
-
-During gameplay, they hope to collect items such as coins that will boost their score, while also encountering obstacles that slow their progress or increase the challenge.
-
-Upon reaching the maze’s endpoint, they expect a congratulatory message, displaying their final score and time. They also want the option to save the game for future play.
-
-Throughout the game, players expect immersive sound effects corresponding to their actions, such as collecting items or hitting obstacles. They also seek background music that enhances the game’s atmosphere and excitement.
-
-Finally, they desire visually engaging graphics and animations, ensuring the game remains fun and captivating.
+For example, users might enter a location and receive weather updates, search for stock prices, or access other forms of real-time information using the API. The website provides immediate feedback if an API request fails or data cannot be retrieved.
 
 ---
